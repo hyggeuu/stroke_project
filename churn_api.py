@@ -18,6 +18,9 @@ app = FastAPI(
     docs_url="/docs",
     openapi_url="/openapi.json"
 )
+@app.get("/")
+def root():
+    return {"message": "Stroke Prediction API is running!"}
 
 
 class StrokeInput(BaseModel):
